@@ -3,7 +3,7 @@ var WelcomePopUpWindow = function(main){
 }
 
 WelcomePopUpWindow.prototype.render = function(){
-  var headerText = "elcome to the most comprehensive UK coding bootcamps database!"
+  var headerText = "Welcome to the most comprehensive UK coding bootcamps database!"
   this.text = "Here you can find the latest available information about every coding bootcamp existing in the UK .\n \n You can filter bootcamps by specific requirement such as: Location, Price, Programming languages.";
 
   var popUp = document.getElementById('pop-up');
