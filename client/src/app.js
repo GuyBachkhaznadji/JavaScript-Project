@@ -11,7 +11,7 @@ var app = function(){
     welcomePopUpWindow.render();
 
 
-    var favouritesData = new AjaxRequest('https://code-schools-dot-sort.herokuapp.com/favourites');
+    var favouritesData = new AjaxRequest('/favourites');
     var favouritesTag = document.querySelector("#favourites");
     var favouritesView = new FavouritesView(favouritesTag);
     favouritesData.get(favouritesView.render.bind(favouritesView));
@@ -19,7 +19,7 @@ var app = function(){
     var detailsTag = document.querySelector("#bootcamp-details");
     var bootcampDetailsView = new BootcampDetailsView(detailsTag);
 
-    var bootcampsData = new AjaxRequest('https://code-schools-dot-sort.herokuapp.com/api/code-bootcamps')
+    var bootcampsData = new AjaxRequest('/api/code-bootcamps')
     var main = document.querySelector("#all-bootcamps");
 
 
