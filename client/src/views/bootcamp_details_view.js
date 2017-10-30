@@ -177,7 +177,7 @@ var BootcampDetailsView = function(detailsElement) {
     priceLengthBox.appendChild(priceTag);
 
     favButton.addEventListener("click", function(){
-        var favouritesData = new AjaxRequest('http://localhost:3000/favourites');
+        var favouritesData = new AjaxRequest('/favourites');
         favouritesData.post(bootcamp);
     })
 
