@@ -137,7 +137,7 @@ var app = function(){
     welcomePopUpWindow.render();
 
 
-    var favouritesData = new AjaxRequest('http://localhost:3000/favourites');
+    var favouritesData = new AjaxRequest('favourites');
     var favouritesTag = document.querySelector("#favourites");
     var favouritesView = new FavouritesView(favouritesTag);
     favouritesData.get(favouritesView.render.bind(favouritesView));
@@ -145,7 +145,7 @@ var app = function(){
     var detailsTag = document.querySelector("#bootcamp-details");
     var bootcampDetailsView = new BootcampDetailsView(detailsTag);
 
-    var bootcampsData = new AjaxRequest('http://localhost:3000/api/code-bootcamps')
+    var bootcampsData = new AjaxRequest('api/code-bootcamps')
     var main = document.querySelector("#all-bootcamps");
 
 
@@ -439,7 +439,7 @@ var BootcampDetailsView = function(detailsElement) {
     priceLengthBox.appendChild(priceTag);
 
     favButton.addEventListener("click", function(){
-        var favouritesData = new AjaxRequest('http://localhost:3000/favourites');
+        var favouritesData = new AjaxRequest('/favourites');
         favouritesData.post(bootcamp);
     })
 
